@@ -1,0 +1,496 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Sarala', sans-serif;
+    margin: 0;
+}
+
+/*------------------------ESTILOS BASE -------------------------*/
+img{
+    display:flex;
+    width: 100%;
+    max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+}
+.container{
+    width: 100%;
+    margin: auto;
+}
+.container--flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.column{
+    width: 100%;
+}
+
+
+/*----------------------- ESTILOS HEADER----------------*/
+.main-header{
+    width: 100%;
+    
+}
+.logo{
+    font-size: 50px;
+    color: rgb(26, 97, 44);
+    padding: 10px;
+    font-family: 'Crete Round', serif;
+    font-weight: 100px; 
+}
+.main-header__contactInfo__phone{
+    background-color:  none;
+    color: white;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.main-header__contactInfo__address{
+    padding: 10px;
+    margin: 0;
+    color: white;
+    background-color: none;
+}
+.main-header [class*="icon-"]::before{ 
+    position: relative;
+    top: 2px;
+    right: 5px;
+}
+
+/*---------------------------------ESTILOS De MENU -------------------*/
+.main-nav{
+    width: 100%;
+    position: relative;
+    z-index: 2000;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+}
+.icon-menu{
+    display: block;
+    color: white;
+    border: 1px solid white;
+    border-radius: 3px;
+    width: 40px;
+    height: 40px;
+    line-height: 45px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1.5em;
+}
+.social-icon{
+    display: flex;
+    justify-content: space-between;
+}
+.social-icon [class*="icon-"] {
+    color: black;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3em;
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border-radius: 50%;
+}
+.social-icon__link {
+    text-decoration: none;
+}
+.menu{
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: rgb(0, 0, 0, .80);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    height: 0; 
+    overflow: hidden;
+    transition: height .4s linear;   
+    
+}
+.menu__link{
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+}
+.menu__link:hover{
+    background-color: rgb(26, 97, 44);
+}
+
+.menu__link--select{
+    background-color: rgb(26, 97, 44);
+}
+.mostrar {
+    height: 400px;
+
+}
+/*--------------------------------ESTILOS DE BANNER--------------------------*/
+.banner{
+    margin-top: -50px;
+    position: relative;
+}
+.banner:before {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0, 0.7);
+    z-index: 1000;
+    top: 0;
+}
+.banner__img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+.banner__content{
+    width: 60%;
+    color: white;
+    text-align: center;
+    position: absolute;
+    z-index: 1500;
+    top: 50%;
+    left: 50%;
+    transform:translateX(-50%) translateY(-50%);
+    font-style: 1.5em;
+    font-weight: bold;
+    
+}
+/*----------------------------------ESTILOS PRINCIPALES------------------------*/
+
+.group--color .container{
+    background-color: rgb(26, 97, 44);
+    color: white;
+    padding-top: 30px;
+    text-align: center;  
+    height: 200px; 
+    font-family: 'Amethysta', serif;
+    justify-content: center;
+    position: relative;
+    bottom: 20px;
+    font-size: 30px;
+}
+.group--color .container p{
+    font-size: 20px;
+    margin: 20px;
+}
+.productos .group__title{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 200px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    font-size: 10px;
+    font-family: 'Courgette', cursive;
+   
+}
+.main__tittle{
+    margin: 15px 0;
+    font-size: 3.5em;
+    font-weight: 100;
+    font-family: 'Delius Swash Caps', cursive;
+}
+.main__about__description .column :nth-child(2){
+    padding: 10px;
+}
+.container .container--flex{
+    display: flex;
+}
+.contenedorlibro{
+    display: flex;
+}
+.cafe{
+    height: 450px;
+    width: 500px
+}
+.btn{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    width: 120px;
+    background:  rgb(26, 97, 44);
+    color: white;
+    padding: 10px;
+    margin: 10px auto;
+}
+.productos {
+    margin-bottom: 150px;
+}
+.contenedor{
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 30vh;
+    object-fit: cover;
+    background-color: rgb(216, 216, 79);
+}
+.contenedor figure{
+    position: relative;
+    height: 250px;
+    width: 250px;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 0px 15px 25px
+    rgba(0,0,0,.50);
+    cursor: pointer;  
+}
+.contenedor figure .capa{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(32, 63, 52, 0.6);
+    transition: all 500ms ease-out;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+    object-fit: cover;
+}
+.contenedor figure:hover > .capa{
+    opacity: 1;
+    visibility: visible; 
+}
+.contenedor figure:hover > img{
+    transform: scale(1.3);
+    transition: .3s linear;
+    
+}
+.contenedor figure:hover > .capa h3{
+    margin-top: 70px;
+    margin-bottom: 15px;
+}
+.contenedor figure .capa h3{
+    font-family: 'Palanquin', sans-serif;
+    font-size: 50px;
+    color: #FFF;
+    font-weight: 400;
+    margin-bottom: 120px;
+    transition: all 500ms ease-out;
+    margin-top: 30px;
+}
+.contenedor figure .capa p{
+    color: #fff;
+    font-size: 15px;
+    width: 100%;
+    max-width: 220px;
+    margin: auto;
+
+}
+
+
+/*---------------------- ESTILOS DE FOOTER------------------------------*/
+
+.main-footer{
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: .7em;
+    text-decoration: none; 
+    
+}
+
+.container2{
+    display: flex;
+  
+}
+
+.main-footer .column{
+    width: 33%;
+    margin-left: 40px;
+}
+.copy{
+    text-align: center;
+    margin: auto;
+    margin-top: 15px;
+}
+.main-footer [class*="icon-"] {
+    color: white;
+    text-decoration: none;
+}
+
+.main-footer [class*="icon-"]:before {
+    position: relative;
+    top: 3px;
+    right: 5px;
+    text-decoration: none;
+}
+
+
+a, a:hover, a:active, a:visited, a:focus {
+    text-decoration:none;
+    color: white;
+}
+
+
+/*------------------- ESTILOS RESPONSIVE --------------------------------*/
+@media screen and (min-width:480px) {
+    .logo{
+        color: rgb(26, 97, 44);
+        font-size: 30px;
+    }
+    .main-header__contactInfo{
+        text-align: right;
+        background-color: none;
+    }
+   
+    .main-header__contactInfo__phone{
+        background-color: none;
+        color: white;
+    }
+    .main-header__contactInfo__adress{
+        color: white;
+        background-color: none;
+    }
+    .column--50{
+        width: 49%;
+    }
+    .main-nav{
+        background-color: rgba(0,0,0,0.85);
+    }
+    .main{
+        padding-bottom: 15px;
+    }
+    .banner{
+        margin-top: -250px;
+        z-index: -1000;
+    }
+    .banner .img{
+        height: 600px;
+    }
+    .banner__content{
+        font-size: 1.5em;
+        
+    }
+    .column--50{
+        width: 49%;
+    }
+
+    .column--50-25{
+        width: 49%;
+    }
+    .productos .group__title{
+        font-size: 30px;
+    }    
+    .main__about__description .column:nth-child(2){
+        padding-left: 20px;
+        font-size: .9em;
+    }
+    .main__about__description .btn{
+        margin: 0;
+    }
+    
+}
+@media screen and (min-width: 768px){
+    .logo{
+        font-size: 3em;
+        padding: 0;
+    }
+    .banner__content{
+        font-size: 2.5em;
+        top: 50%;
+        left: 50%;
+        width: 60%;
+    }
+    .main-footer .container--flex{
+        align-items: flex-start;
+        font-size: 13px;
+    }
+    .banner__img{
+        height: 700px;
+    }
+    .productos .group__title{
+        font-size: 50px;
+    }
+    .brief__img{
+        width: 250px;
+        height: 250px;
+    }
+    .main__about__description{
+        margin-top: 30px;
+     }
+     .main__about__description .column--50:nth-child(2){
+        font-size: 1em;
+      }
+    .main__about__description .column--50:nth-child(2) .column__txt{ 
+        line-height: 30px;
+    }
+    .column--50-25{ 
+        width: 23%;
+    }
+    .column__tittle{ 
+        font-size: 1.em;
+    }
+    .group__tittle{ 
+        font-size: 2.2em;
+    }
+}
+
+@media screen and (min-width: 1024px){
+   
+    .logo{
+        font-size: 5em;
+        padding: 0;
+    }
+
+    .main-header__contactInfo__phone{
+        background-color:  rgb(26, 97, 44);
+        color: white;
+        padding-right: 0;
+        font-size: 1.5em;
+    }
+    .main-header__contactInfo__adress{
+        color: white;
+        background-color: black;
+        padding-right: 0;
+        font-size: 1.5em;
+    }
+    .main-header__contactInfo__phone, .main-header__contactInfo__address{
+        padding-right: 0;
+        font-size: 1.15em;
+    }
+    .main-nav{
+        padding: 0;
+    }
+    
+    .banner__img{
+        height: 850px;
+    }
+    .banner__content{
+        font-size: 3.5em;
+        top: 60%;
+        left: 50%;
+        width: 60%;
+    }
+    .icon-menu{
+        display: none;
+    }
+    .menu{
+        position: static;
+        display: flex;
+        height: auto;
+        width: auto;  
+    }
+    
+    .menu__link{
+        padding: 20px;
+    }
+    .main-footer .container--flex{
+        align-items: flex-start;
+        font-size: 15px;
+    }
+
+    
+}
